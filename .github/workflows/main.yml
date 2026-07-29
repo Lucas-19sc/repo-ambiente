@@ -15,3 +15,10 @@ jobs:
         steps:
             - name: Fake de deploy em ambiente
               run: echo "Deploy no ambiente de ${{ vars.AMBIENTE_DEPLOY }}"
+       
+    teste-fake:
+        runs-on: ubuntu-latest
+        environment: ${{ inputs.ambiente }}
+        steps:
+             - name: Fake de deploy em ambiente
+               run: echo "Deploy no ambiente de ${{ vars.AMBIENTE_DEPLOY }}" 
